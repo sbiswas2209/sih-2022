@@ -1,3 +1,4 @@
+import 'package:client/screens/registration_option.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -44,7 +45,13 @@ class _HomeState extends State<Home> {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: TextButton(
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const RegistrationOptionPage()));
+                  },
                   style: TextButton.styleFrom(backgroundColor: Colors.orange),
                   child: const Text(
                     "Lets Go",
