@@ -63,11 +63,12 @@ class RegistrationOptionPage extends StatelessWidget {
               ),
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 50.0),
+                  padding: const EdgeInsets.only(top: 53.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        border: Border.all(color: Colors.black),
-                        borderRadius: BorderRadius.all(Radius.circular(5.0))),
+                        border: Border.all(color: Colors.black, width: 2.0),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0))),
                     width: MediaQuery.of(context).size.width - 40.0,
                     child: TextButton(
                       onPressed: null,
@@ -75,7 +76,7 @@ class RegistrationOptionPage extends StatelessWidget {
                           TextButton.styleFrom(backgroundColor: Colors.white),
                       child: const Text(
                         "Create Account",
-                        style: TextStyle(color: Colors.black, height: 2.0),
+                        style: TextStyle(color: Colors.black, height: 2.15),
                       ),
                     ),
                   ),
