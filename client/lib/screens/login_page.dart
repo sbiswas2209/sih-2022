@@ -1,3 +1,4 @@
+import 'package:client/screens/createAccount.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -161,7 +162,12 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: const BorderRadius.all(Radius.circular(5.0))),
                 width: MediaQuery.of(context).size.width - 40.0,
                 child: TextButton(
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignUp()));
+                  },
                   style: TextButton.styleFrom(backgroundColor: Colors.white),
                   child: const Text(
                     "Sign Up",
