@@ -1,4 +1,6 @@
 import os
+import config;
+import pymongo;
 import motor.motor_asyncio
-client = motor.motor_asyncio.AsyncIOMotorClient(os.environ.get("MONGODB_URL"))
+client = pymongo.MongoClient(config.mongo_uri)
 db = client.travel

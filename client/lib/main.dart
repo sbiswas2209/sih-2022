@@ -1,4 +1,5 @@
 import 'package:client/screens/login_page.dart';
+import 'package:client/screens/onboarding.dart';
 import 'package:client/screens/registration_option.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RegistrationOptionPage(),
+      home: const Home(),
     );
   }
 }
