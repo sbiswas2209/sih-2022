@@ -102,15 +102,40 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: EdgeInsets.only(top: 20.0),
               child: CarouselSlider(
                 items: [
-                  Container(child: Image.asset('assets/1.png')),
-                  Image.asset('assets/2.png'),
-                  Image.asset('assets/3.png'),
-                  Image.asset('assets/4.png'),
+                  Container(
+                    width: double.infinity,
+                    child: Image.asset(
+                      'assets/1.png',
+                      fit: BoxFit.cover,
+                    ),
+                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                  ),
+                  Container(
+                      width: double.infinity,
+                      child: Image.asset(
+                        'assets/2.png',
+                        fit: BoxFit.cover,
+                      ),
+                      margin: EdgeInsets.symmetric(horizontal: 5.0)),
+                  Container(
+                      width: double.infinity,
+                      child: Image.asset(
+                        'assets/3.png',
+                        fit: BoxFit.cover,
+                      ),
+                      margin: EdgeInsets.symmetric(horizontal: 5.0)),
+                  Container(
+                      width: double.infinity,
+                      child: Image.asset(
+                        'assets/4.png',
+                        fit: BoxFit.cover,
+                      ),
+                      margin: EdgeInsets.symmetric(horizontal: 5.0)),
                 ],
                 //Slider Container properties
                 options: CarouselOptions(
                   height: 180.0,
-                  enlargeCenterPage: true,
+                  enlargeCenterPage: false,
                   autoPlay: true,
                   aspectRatio: 16 / 9,
                   autoPlayCurve: Curves.fastLinearToSlowEaseIn,
