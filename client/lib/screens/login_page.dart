@@ -1,4 +1,5 @@
 import 'package:client/screens/createAccount.dart';
+import 'package:client/screens/forgotPassword.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -112,14 +113,19 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(top: 20.0, left: 200.0, right: 20.0),
+          Padding(
+            padding: const EdgeInsets.only(top: 20.0, left: 200.0, right: 20.0),
             child: TextButton(
-              child: Text(
+              child: const Text(
                 "Forgot Password?",
                 style: TextStyle(color: Colors.black),
               ),
-              onPressed: null,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ForgotPassword()));
+              },
             ),
           ),
           const SizedBox(
