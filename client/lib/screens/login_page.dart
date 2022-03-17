@@ -91,25 +91,23 @@ class _LoginPageState extends State<LoginPage> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 40.0, left: 20.0, right: 20.0),
-            child: TextFormField(
+            child: TextField(
               decoration: InputDecoration(
-                labelText: "Email",
-                fillColor: Colors.white,
-                focusedBorder: OutlineInputBorder(
+                border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
+                hintText: 'Email',
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
-            child: TextFormField(
+            child: TextField(
               decoration: InputDecoration(
-                labelText: "Password",
-                fillColor: Colors.white,
-                focusedBorder: OutlineInputBorder(
+                border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),
+                hintText: 'Password',
               ),
             ),
           ),
