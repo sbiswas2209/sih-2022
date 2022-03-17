@@ -1,3 +1,4 @@
+import 'package:client/screens/login_page.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationOptionPage extends StatelessWidget {
@@ -50,7 +51,12 @@ class RegistrationOptionPage extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(5.0))),
                     width: MediaQuery.of(context).size.width - 40.0,
                     child: TextButton(
-                      onPressed: null,
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginPage()));
+                      },
                       style:
                           TextButton.styleFrom(backgroundColor: Colors.orange),
                       child: const Text(
