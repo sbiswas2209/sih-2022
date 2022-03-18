@@ -1,5 +1,6 @@
 import 'package:client/screens/createAccount.dart';
 import 'package:client/screens/forgotPassword.dart';
+import 'package:client/screens/home_screen..dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -13,6 +14,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
+    bool _passwordVisible = false;
     return Scaffold(
       body: ListView(
         children: [
@@ -105,6 +107,7 @@ class _LoginPageState extends State<LoginPage> {
           Padding(
             padding: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
             child: TextField(
+              obscureText: !_passwordVisible,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(25.0),
@@ -139,8 +142,10 @@ class _LoginPageState extends State<LoginPage> {
             height: 50.0,
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeScreen()));
               },
               style: TextButton.styleFrom(backgroundColor: Colors.orange),
               child: const Text(

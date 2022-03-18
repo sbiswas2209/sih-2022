@@ -1,3 +1,4 @@
+import 'package:client/screens/seat_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -494,7 +495,10 @@ class _TripPageState extends State<TripPage> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: TextButton(
-              onPressed: null,
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const SeatPage()));
+              },
               style: TextButton.styleFrom(backgroundColor: Colors.orange),
               child: const Text(
                 "Pick your seat",
