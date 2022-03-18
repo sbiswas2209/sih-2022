@@ -1,4 +1,11 @@
+import 'package:client/screens/TravelSite.dart';
+import 'package:client/screens/home_screen..dart';
+import 'package:client/screens/login_page.dart';
+import 'package:client/screens/onboarding.dart';
 import 'package:client/screens/registration_option.dart';
+import 'package:client/screens/timeTable.dart';
+import 'package:client/screens/seat_page.dart';
+import 'package:client/screens/trip_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RegistrationOptionPage(),
+      home: const TimeTable(),
     );
   }
 }
