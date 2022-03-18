@@ -1,7 +1,5 @@
 from base64 import encode
 from pprint import pprint
-import config
-import bcrypt
 from src.auth.model import User
 from shared.database import db
 from fastapi.encoders import jsonable_encoder
