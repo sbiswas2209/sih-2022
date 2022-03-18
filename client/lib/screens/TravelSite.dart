@@ -189,7 +189,7 @@ class _TravelState extends State<Travel> {
               textAlign: TextAlign.center,
               style:
                   TextStyle(color: Colors.black, fontWeight: FontWeight.w500)),
-          onPressed: null,
+          onPressed: () {},
         ),
       ),
     ]));

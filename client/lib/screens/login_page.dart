@@ -1,5 +1,6 @@
 import 'package:client/screens/createAccount.dart';
 import 'package:client/screens/forgotPassword.dart';
+import 'package:client/screens/home_screen..dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -139,8 +140,10 @@ class _LoginPageState extends State<LoginPage> {
             height: 50.0,
             child: TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const LoginPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const HomeScreen()));
               },
               style: TextButton.styleFrom(backgroundColor: Colors.orange),
               child: const Text(

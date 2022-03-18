@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:client/screens/TravelSite.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -82,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: EdgeInsets.only(left: 20.0),
             child: Text(
-              "Hi John ,",
+              "Hi Traveller ,",
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w300),
             ),
           ),
@@ -290,68 +291,77 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Card(
-                    child: Column(children: [
-                      Stack(children: [
-                        Container(
-                          height: 180.0,
-                          width: 220.0,
-                          child: Image.asset("assets/1.png"),
-                        ),
-                        Align(
-                          alignment: Alignment.topRight,
-                          child: FavoriteButton(
-                            iconSize: 40.0,
-                            iconDisabledColor:
-                                Color.fromARGB(255, 151, 149, 149),
-                            valueChanged: (_isFavorite) {
-                              print('Is Favorite $_isFavorite)');
-                            },
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Travel()));
+                    },
+                    child: Card(
+                      child: Column(children: [
+                        Stack(children: [
+                          Container(
+                            height: 180.0,
+                            width: 220.0,
+                            child: Image.asset("assets/1.png"),
                           ),
-                        )
-                      ]),
-                      const SizedBox(height: 5.0),
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                "Nusa Pedina",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 20.0),
-                              ),
-                              SizedBox(height: 5.0),
-                              Row(children: [
+                          Align(
+                            alignment: Alignment.topRight,
+                            child: FavoriteButton(
+                              iconSize: 40.0,
+                              iconDisabledColor:
+                                  Color.fromARGB(255, 151, 149, 149),
+                              valueChanged: (_isFavorite) {
+                                print('Is Favorite $_isFavorite)');
+                              },
+                            ),
+                          )
+                        ]),
+                        const SizedBox(height: 5.0),
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  "Nusa Pedina",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 20.0),
+                                ),
+                                SizedBox(height: 5.0),
+                                Row(children: [
+                                  Icon(
+                                    Icons.location_on,
+                                    color: Colors.orange,
+                                  ),
+                                  Text(
+                                    "Bali, Indoesia",
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.w300),
+                                  )
+                                ]),
+                              ],
+                            ),
+                            SizedBox(width: 40.0),
+                            Row(
+                              children: [
+                                Text(
+                                  "4.5",
+                                  style: TextStyle(
+                                      fontSize: 15.0,
+                                      fontWeight: FontWeight.w700),
+                                ),
                                 Icon(
-                                  Icons.location_on,
+                                  Icons.star,
                                   color: Colors.orange,
                                 ),
-                                Text(
-                                  "Bali, Indoesia",
-                                  style: TextStyle(fontWeight: FontWeight.w300),
-                                )
-                              ]),
-                            ],
-                          ),
-                          SizedBox(width: 40.0),
-                          Row(
-                            children: [
-                              Text(
-                                "4.5",
-                                style: TextStyle(
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              Icon(
-                                Icons.star,
-                                color: Colors.orange,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ]),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ]),
+                    ),
                   ),
                 ),
                 Padding(
