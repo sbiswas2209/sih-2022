@@ -1,3 +1,4 @@
+import 'package:client/screens/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -173,7 +174,12 @@ class _SignUpState extends State<SignUp> {
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         color: Colors.black)),
-                onPressed: null,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LoginPage()));
+                },
               ),
             ],
           ),
